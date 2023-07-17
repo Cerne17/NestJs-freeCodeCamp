@@ -1,4 +1,6 @@
-This is the step by step guide to programming a full functional REST API with NestJs, by freeCodeCamp (bookmark application)
+CHAPTER ZERO: THE PROJECT
+
+  This is the step by step guide to programming a full functional REST API with NestJs, by freeCodeCamp (bookmark application)
 ----------------------------------------------------------------
 CHAPTER 1: PROJECT SETUP
 
@@ -98,4 +100,19 @@ RUNNING PRISMA:
 ----------------------------------------------------------------
 PRISMA STUDIO:
 
-  
+  Powerfull tool used to inspect our database.
+    npx prisma studio
+  This code returns us a link that we can use to inspect our
+  models in the browser.
+  We can use this URL even to initialize new entities on the 
+  browser, if we want to. It is 100% compatible with the prisma
+  schema
+
+----------------------------------------------------------------
+CONNECTING OUR SCRIPTS WITH THE PRISMA DATABASE (VIA A MODULE):
+
+  nest g module prisma (module that will conect the database and the
+  application)
+  nest g service prisma --no-spec (creates the service file without
+  the spec file to the prisma module. This will be used to add the 
+  logic of the connection with the database)
